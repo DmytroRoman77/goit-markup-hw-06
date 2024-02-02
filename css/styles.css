@@ -280,8 +280,8 @@ margin-left: auto;
     display: flex;
     flex-wrap: wrap;
     background: #FFF;
-    column-gap: 48px;
-    row-gap: 24px;
+    /* column-gap: 48px;
+    row-gap: 24px; */
 }
 .list-item-portf {
 background: #FFF;
@@ -701,4 +701,8 @@ text-decoration-line: underline;
     width: 734px;
     padding: 0 15px;
     margin: 0 auto;
-}}
+}
+.list-box-portfolio {
+    column-gap: 72px;
+    row-gap: 24px; }
+}
