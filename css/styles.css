@@ -12,7 +12,6 @@ ul,ol {
     margin: 0;
 }
 .container {
-    /* width: 1158px; */
     width: 290px;
     padding: 0 15px;
     margin: 0 auto;
@@ -197,12 +196,6 @@ margin-left: auto;
     line-height: 24px;
     letter-spacing: 0.32px;
 }
-
-
-
-
-
-
 .box-team {
     background: #F4F4FD;
     /* padding: 120px 0; */
@@ -253,17 +246,10 @@ margin-left: auto;
     line-height: 24px;
     letter-spacing: 0.32px;
 }
-
-
-
-
-
 .box-portfolio { 
     background: #FFF;
     padding-top: 96px;
     padding-bottom: 96px;
-    /* padding-top: 120px;  */
-    /* padding-bottom: 120px; */
 }
 .title-portfolio {
     color:  #2E2F42;
@@ -280,12 +266,10 @@ margin-left: auto;
     display: flex;
     flex-wrap: wrap;
     background: #FFF;
-    /* column-gap: 48px;
-    row-gap: 24px; */
+    row-gap: 48px;
 }
 .list-item-portf {
 background: #FFF;
-/* width: calc((100% - 48px) / 3); */
 width: 100%;
 transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -293,7 +277,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .list-item-portf:focus {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-/* .list-wrap {
+.list-wrap {
     overflow: hidden;
     position: relative;
 }
@@ -316,7 +300,7 @@ transform: translateY(100%);
 .list-item-portf:hover .overlay-text ,
 .list-item-portf:focus .overlay-text {
 transform: translateY(0); 
-}*/
+}
 .list-item-project-name {
     color:#2E2F42;
     font-size: 20px;  
@@ -341,11 +325,6 @@ margin: 0 auto;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-
-
-
-
-
 /* Footer */
 .footer {
     background: #2E2F42;
@@ -699,10 +678,28 @@ text-decoration-line: underline;
 @media screen and (min-width:768px) {
 .container {
     width: 734px;
-    padding: 0 15px;
-    margin: 0 auto;
+
 }
 .list-box-portfolio {
-    column-gap: 72px;
-    row-gap: 24px; }
+    column-gap: 24px;
+    row-gap: 72px; 
+}
+.list-item-portf {
+    width: calc((100% - 24px) / 2);
+} 
+}
+@media screen and (min-width:1158) {
+    .container {
+    width: 1158px;
+}
+.box-portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.list-box-portfolio {
+    row-gap: 48px;
+    }
+.list-item-portf {
+    width: calc((100% - 48px) / 3);}
+
 }
