@@ -31,6 +31,10 @@ width: 1px; height: 1px; margin: -1px;
 border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%);
 clip: rect(0 0 0 0);
 overflow: hidden;}
+
+
+
+
 /* Header */
 .header-container{
     display: flex;
@@ -58,7 +62,8 @@ align-items: center;
     color:#2E2F42;
 }
 .nav-list {
-    display: flex;
+    display: none;
+    /* display: flex; */
     gap: 40px;
 }
 .nav-link {
@@ -94,7 +99,8 @@ font-style: normal;
 margin-left: auto;
 }
 .address-list {
-    display: flex;
+    display: none;
+    /* display: flex; */
     gap: 40px;
 }
 .address-link {
@@ -108,26 +114,38 @@ margin-left: auto;
 .address-link:focus {
     color: #404BBF;
 }
+
+
+
+
+
 /* Main content */
 .title-site {
     max-width: 1440px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11-mob.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #2E2F42;
-    padding: 188px 0;
+    padding: 72px 0;
     margin: 0 auto;
 }
+@media screen and (min-resolution:192dpi) {
+.title-site {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11-mob-2x.jpg);
+    } 
+}
+
 .slogan {
     color:#FFF;
     margin: 0 auto;
     max-width: 496px;
     text-align: center;
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 1.07;
-    letter-spacing: 1.12px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    
 }
 .button {
     font-family: inherit;
@@ -143,7 +161,7 @@ margin-left: auto;
     min-width: 169px;
     align-items: flex-start;
     margin: 0 auto;
-    margin-top: 48px;
+    margin-top: 72px;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -694,13 +712,22 @@ text-decoration-line: underline;
 .container {
     width: 734px;
 }
-.list-box-portfolio {
-    column-gap: 24px;
-    row-gap: 72px; 
+.title-site {
+    padding: 112px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11-tab.jpg);
 }
-.list-item-portf {
-    width: calc((100% - 24px) / 2);
-} 
+@media screen and (min-resolution:192dpi) {
+    .title-site {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11-tab-2x.jpg);
+        } 
+    }
+.slogan {
+    font-size: 56px;
+    line-height: 1.07;
+}
+.button {
+    margin-top: 36px;
+}
 .box-team > .container {
     width: 552px;
 }
@@ -710,7 +737,17 @@ text-decoration-line: underline;
     gap: 64px;
 }
 .list-item-team {
-    width: calc((100% - 24px) / 2);}
+    width: calc((100% - 24px) / 2);
+}
+.list-box-portfolio {
+    column-gap: 24px;
+    row-gap: 72px; 
+}
+.list-item-portf {
+    width: calc((100% - 24px) / 2);
+} 
+
+
 }
 
 
@@ -722,15 +759,24 @@ text-decoration-line: underline;
     .container {
     width: 1158px;
 }
-.box-portfolio {
-    padding: 120px 0;
+.title-site {
+    padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11.jpg);
 }
-.list-box-portfolio {
-    row-gap: 48px;
-    column-gap: 24px;
+@media screen and (min-resolution:192dpi) {
+    .title-site {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70) , rgba(46, 47, 66, 0.70)) ,url(../images/img-11-2x.jpg);
+        } 
     }
-.list-item-portf {
-    width: calc((100% - 48px) / 3);}
+.button {
+    margin-top: 48px;
+}
+.list-features-icon {
+    display: flex;
+    }
+.features-icon {
+    display: flex;
+}
 .box-team {
     padding: 120px 0;
 }
@@ -741,10 +787,15 @@ text-decoration-line: underline;
 .list-item-team {
     width: calc((100% - 72px) / 4);
 }
-.list-features-icon {
-display: flex;
+.box-portfolio {
+    padding: 120px 0;
 }
-.features-icon {
-display: flex;
+.list-box-portfolio {
+    row-gap: 48px;
+    column-gap: 24px;
+    }
+.list-item-portf {
+    width: calc((100% - 48px) / 3);
 }
 }
+
